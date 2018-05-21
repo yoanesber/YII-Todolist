@@ -12,18 +12,18 @@ The application folder, consists of 3 main folders, they are frontend, backend, 
 
 ## Preparing application
 You only need to do these once for all.
-1. Copy or clone this repository using command prompt/console with command 
+1. Copy or clone this repository using command prompt/console with command:
 
    ```
-   >>git clone https://github.com/yoanesber/Todolist-YII.git
-   >>cd Todolist-YII
+   >>git clone https://github.com/yoanesber/YII-Todolist.git
+   >>cd YII-Todolist
    ```
 
-2. Run script
+2. Run script composer update as below:
 
    ```
-   >>composer update --prefer-dist
-   >>composer install
+   >>YII-Todolist > composer update --prefer-dist
+   >>YII-Todolist > composer install
    ```
 
 3. Change the php.exe path in yii.bat file based on the configuration on your computer
@@ -32,18 +32,27 @@ You only need to do these once for all.
    if "%PHP_COMMAND%" == "" set PHP_COMMAND=E:\xampp\php\php.exe
    ```
 
-4. Create a new database `todolist` and adjust the `components['db']` configuration in `common/config/main-local.php` accordingly.
-
-5. Still in command prompt/console (`Todolist-YII` folder), apply migrations with command `yii migrate`.
+4. Run script php init as below:
 
    ```
-   >>Todolist-YII/yii migrate
+   >>YII-Todolist > php init
    ```
 
-6. That's all. You just need to wait for completion! Then you can run the YII Server with command `yii serve --docroot="frontend/web/"`.
+    Select '0' for Development Environment, and '1' for Production Environment
+
+
+5. Create a new database `todolist` and adjust the `components['db']` configuration in `common/config/main-local.php` accordingly.
+
+6. Apply migrations with command as below:
+
+   ```
+   >>YII-Todolist/yii migrate
+   ```
+
+7. That's all. You just need to wait for completion! Then you can run the YII Server with command as below:
   
    ```
-   >>Todolist-YII/yii serve --docroot="frontend/web/"
+   >>YII-Todolist/yii serve --docroot="frontend/web/"
    ```
 
-7. After that you can access project locally by URLs: `http://localhost:8080/`
+8. Access the project locally by URLs: `http://localhost:8080/` on your browser.
